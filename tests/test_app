@@ -1,0 +1,4 @@
+from app import home
+
+def test_home():
+    assert home() == "<h1>Hello , Greetings from Sasi!</p>"
