@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: pyflask
-        image: sasi:1
-        imagePullPolicy: Never
+        image: sasi1081/pythonflask:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
