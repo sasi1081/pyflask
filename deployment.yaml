@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-python-service
+  name: pyflask-service
 spec:
   selector:
     app: hello-python
@@ -16,17 +16,20 @@ spec:
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: hello-python
+  name: pyflask
 spec:
   replicas: 4
+  selector:
+    matchLabels:
+      app: pyflask
   template:
     metadata:
       labels:
-        app: hello-python
+        app: pyflask
     spec:
       containers:
-      - name: hello-python
-        image: hello-python:latest
+      - name: pyflask
+        image: sasi:1
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
