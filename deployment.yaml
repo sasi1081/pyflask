@@ -4,7 +4,7 @@ metadata:
   name: pyflask-service
 spec:
   selector:
-    app: hello-python
+    app: pyflask
   ports:
   - protocol: "TCP"
     port: 6000
